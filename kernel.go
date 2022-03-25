@@ -698,7 +698,7 @@ func evalSpecialCommands(ir *interp.Interp, outerr OutErr, code string) string {
 			case '%':
 				evalSpecialCommand(ir, outerr, line)
 				lines[i] = ""
-			case '$':
+			case '!':
 				evalShellCommand(ir, outerr, line)
 				lines[i] = ""
 			default:
